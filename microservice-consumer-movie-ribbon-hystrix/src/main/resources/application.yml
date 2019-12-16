@@ -9,3 +9,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+management:
+  security:
+    # 设置actuator的链接不需要权限
+    # 也可以添加spring-boot-starter-security，然后有ACTUATOR角色的用户将可以访问对应链接
+    enabled: false
